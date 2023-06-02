@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="200.0" minWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nale.newslettermanagement.controllers.BulletinFollowerItemController">
+
+    <children>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-radius: 20px; -fx-background-radius: 10px;" styleClass="bg-white" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <stylesheets>
+                <URL value="@assets/css/main.css" />
+            </stylesheets>
+            <children>
+                <Label layoutX="14.0" layoutY="14.0" text="Nom" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" layoutX="550.0" layoutY="20.0" text="Prénoms" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lastnameLabel" layoutX="24.0" layoutY="24.0" text="nom" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="firstnameLabel" alignment="CENTER_RIGHT" layoutX="34.0" layoutY="34.0" text="prénoms" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="40.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="20.0" layoutY="84.0" text="Adresse" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="80.0">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Label>
+                <Label fx:id="addressLabel" layoutX="20.0" layoutY="96.0" text="adresse" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="20.0" layoutY="138.0" text="Email" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Label>
+                <Label fx:id="emailLabel" layoutX="30.0" layoutY="148.0" text="email" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" layoutX="460.0" layoutY="143.0" text="Téléphone" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="20.0">
+                    <font>
+                        <Font name="System Bold" size="11.0" />
+                    </font>
+                </Label>
+                <Label fx:id="phoneLabel" alignment="CENTER_RIGHT" layoutX="448.0" layoutY="159.0" text="phone" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            </children>
+
+        </AnchorPane>
+    </children>
+
+</AnchorPane>

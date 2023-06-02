@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nale.newslettermanagement.controllers.FollowerController">
+
+    <stylesheets>
+        <URL value="@assets/css/main.css" />
+    </stylesheets>
+
+    <children>
+        <AnchorPane prefHeight="542.0" prefWidth="693.0" styleClass="bg-jumbotron" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <children>
+                <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="823.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label layoutX="90.0" layoutY="34.0" prefHeight="32.0" prefWidth="413.0" text="Liste des Abonnés" AnchorPane.leftAnchor="75.0">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Label>
+                        <HBox layoutX="440.0" layoutY="37.0" spacing="20.0" AnchorPane.rightAnchor="75.0">
+                            <children>
+                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onRefresh" styleClass="edit-btn2">
+                                    Raffraîchir
+                                </Button>
+                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAdd" styleClass="btn-primary">
+                                    Ajouter
+                                </Button>
+                            </children>
+                        </HBox>
+                        <Label fx:id="nbLabel" layoutX="75.0" layoutY="67.0" prefHeight="17.0" prefWidth="413.0" text="0 bulletins" />
+                        <AnchorPane layoutY="92.0" maxHeight="78.0" prefHeight="71.0" prefWidth="618.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="92.0">
+                            <children>
+                                <ProgressIndicator fx:id="loaderProgress" layoutX="228.0" prefHeight="32.0" prefWidth="170.0" visible="false" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="46.0" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="75.0" layoutY="150.0" style="-fx-background-insets: 0; -fx-background-color: transparent" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="150.0">
+               <content>
+                      <AnchorPane fx:id="container" style="-fx-background-color: #efefef">
+                </AnchorPane>
+               </content>
+            </ScrollPane>
+
+            </children>
+        </AnchorPane>
+        <BorderPane fx:id="contentBorder" prefHeight="400.0" prefWidth="600.0" styleClass="bg-home" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    </children>
+
+</AnchorPane>

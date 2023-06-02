@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.dlsc.formsfx.view.controls.SimpleTextControl?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nale.newslettermanagement.controllers.EditBulletinController">
+
+    <stylesheets>
+        <URL value="@assets/css/main.css" />
+    </stylesheets>
+
+    <VBox alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox spacing="10.0">
+         <children>
+                    <SimpleTextControl alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" vgap="5.0">
+                        <children>
+                            <Label maxWidth="1.7976931348623157E308" text="Nom *" GridPane.columnIndex="1">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="nameField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="41.0" prefWidth="521.0" promptText="nom" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </TextField>
+                            <Label fx:id="nameError" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="300.0" styleClass="error-color" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        </children>
+                        <rowConstraints>
+                            <RowConstraints valignment="TOP" />
+                            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" valignment="TOP" />
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="30.0" prefHeight="41.0" />
+                            <RowConstraints maxHeight="18.0" minHeight="20.0" prefHeight="20.0" />
+                        </rowConstraints>
+                    </SimpleTextControl>
+                    <SimpleTextControl alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" vgap="5.0">
+                        <children>
+                            <Label maxWidth="1.7976931348623157E308" text="Description *" GridPane.columnIndex="1">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </Label>
+                            <TextArea fx:id="descriptionField" promptText="description" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </TextArea>
+                            <Label fx:id="descriptionError" prefWidth="300.0" styleClass="error-color" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        </children>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="24.0" valignment="TOP" />
+                            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" valignment="TOP" />
+                            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="30.0" prefHeight="41.0" />
+                            <RowConstraints maxHeight="18.0" minHeight="20.0" prefHeight="20.0" />
+                        </rowConstraints>
+                    </SimpleTextControl>
+         </children>
+      </VBox>
+        <Label fx:id="processSuccess" alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="300.0" style="-fx-text-fill: green;" textAlignment="CENTER" />
+        <Label fx:id="processError" alignment="CENTER" maxWidth="1.7976931348623157E308" prefWidth="300.0" styleClass="error-color" textAlignment="CENTER" />
+        <HBox alignment="CENTER" prefWidth="200.0" spacing="30.0">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+            <children>
+                <Button mnemonicParsing="false" onAction="#onCancel" styleClass="edit-btn2" text="Annuler" textFill="WHITE" />
+                <Button mnemonicParsing="false" onAction="#onSave" text="Valider" />
+            </children>
+        </HBox>
+      <padding>
+         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+      </padding>
+    </VBox>
+
+</AnchorPane>

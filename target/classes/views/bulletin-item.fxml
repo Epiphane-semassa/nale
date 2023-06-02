@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.shape.SVGPath?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="120.0" prefWidth="500.0"
+            xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.nale.newslettermanagement.controllers.BulletinItemController">
+    <children>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                    style="-fx-border-radius: 20px; -fx-background-radius: 10px;" styleClass="bg-white"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
+
+            <stylesheets>
+                <URL value="@assets/css/main.css"/>
+            </stylesheets>
+            <children>
+                <Label fx:id="nameLabel" layoutX="20.0" layoutY="14.0" styleClass="text-color" text="title"
+                       AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="descriptionLabel" layoutX="20.0" layoutY="52.0" text="description"
+                       AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="nbFollowersLabel" alignment="CENTER_RIGHT" layoutX="428.0" layoutY="22.0" text="abonnés"
+                       textAlignment="RIGHT" textFill="#c24a17" AnchorPane.rightAnchor="40.0"
+                       AnchorPane.topAnchor="20.0"/>
+                <MenuButton fx:id="groupMenuBtn" layoutX="415.0" layoutY="69.0" mnemonicParsing="false"
+                            style="-fx-background-color: transparent;" styleClass="view-more"
+                            AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="40.0">
+                    <items>
+                        <MenuItem fx:id="btnMoreMenu" mnemonicParsing="false" onAction="#onMore" text="Voir détails"/>
+                        <MenuItem fx:id="btnAddFollowerMenu" mnemonicParsing="false" onAction="#onAddFollower" text="Ajouter un abonné"/>
+                        <MenuItem fx:id="btnUpdateMenu" mnemonicParsing="false" onAction="#onUpdate" text="Modifier"/>
+                        <MenuItem fx:id="btnDeleteMenu" mnemonicParsing="false" onAction="#onDelete" text="Supprimer"/>
+                    </items>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <graphic>
+                        <SVGPath
+                                content="M10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19ZM10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19Z M10 5C10 6.1 10.9 7 12 7C13.1 7 14 6.1 14 5C14 3.9 13.1 3 12 3C10.9 3 10 3.9 10 5Z M10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10C10.9 10 10 10.9 10 12Z"
+                                fill="#242424" strokeLineCap="ROUND" strokeType="OUTSIDE"/>
+                    </graphic>
+                </MenuButton>
+
+
+            </children>
+
+        </AnchorPane>
+    </children>
+</AnchorPane>

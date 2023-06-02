@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nale.newslettermanagement.controllers.DashboardController">
+
+    <stylesheets>
+        <URL value="@assets/css/main.css" />
+    </stylesheets>
+
+    <left>
+        <VBox prefHeight="200.0" prefWidth="300.0" styleClass="bg-green-primary" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="60.0" style="-fx-border-insets: 0 0 1 0; -fx-border-color: #079e52;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="67.0" layoutY="13.0" prefWidth="191.0" style="-fx-text-fill: #ffffff" text="NALE DASHBOARD" textAlignment="CENTER" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <ToggleButton fx:id="bulletinBtn" alignment="TOP_LEFT" graphicTextGap="16.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onBulletin" styleClass="dash-menu-item" text="Bulletins">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="dashMenu" />
+                    </toggleGroup>
+                </ToggleButton>
+                <ToggleButton fx:id="followerBtn" alignment="TOP_LEFT" graphicTextGap="16.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onFollower" styleClass="dash-menu-item" text="Abonnés" toggleGroup="$dashMenu">
+                </ToggleButton>
+                <Accordion>
+                    <VBox.margin>
+                        <Insets right="10.0" />
+                    </VBox.margin>
+                </Accordion>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <fx:include fx:id="navBarView" source="nav-bar.fxml" />
+            </top>
+            <center>
+                <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-insets: 0;" BorderPane.alignment="CENTER">
+                    <content>
+                        <BorderPane fx:id="containerPane" prefHeight="578.0" prefWidth="723.0" style="-fx-background-color: #efefef;" />
+                    </content>
+                </ScrollPane>
+            </center>
+        </BorderPane>
+    </center>
+
+
+</BorderPane>
